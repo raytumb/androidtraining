@@ -12,7 +12,7 @@ class Dashboard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard3)
 
-        run( url "https://api.openweathermap.org/data/2.5/forecast?q=purwakarta,ID&appid=2ce659b9c25fc6fe3a07de4ca71d1dac")
+        run("https://api.openweathermap.org/data/2.5/forecast?q=purwakarta,ID&appid=2ce659b9c25fc6fe3a07de4ca71d1dac")
     }
 
     fun run(url: String){
@@ -21,7 +21,7 @@ class Dashboard : AppCompatActivity() {
             .build()
 
         client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, IOException) {}
+            override fun onFailure(call: Call, e:IOException) {}
             override fun onResponse(call: Call, response: Response) = println (response.body()?.string())
         })
     }
