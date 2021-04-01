@@ -10,7 +10,7 @@ class ItemHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val description = itemView.desc
     private val tempNow = itemView.temp
     private val tempMinMax = itemView.temp_range
-    private val imageIcon = itemView.image_desc
+    private val imageIcon = itemView.icon
 
     fun bindItem(item: ListItem) {
         dateTime.text = item.dt?.let { Util.getDayName(it) }
