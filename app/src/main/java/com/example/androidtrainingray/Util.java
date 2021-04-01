@@ -1,6 +1,7 @@
 package com.example.androidtrainingray;
 
 import android.util.Log;
+
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
